@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>API</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div id="app">
+
+        <div id="weather">
+
+            <div id="icon">
+                <img src="http://openweathermap.org/img/wn/10d@4x.png">
+            </div>
+            <div id="temp"></div>
+            <div id="txt">             
+                <div id="content"><h1>Weather Journal</h1></div>
+                <div id="date"></div>
+            </div>
+
+        </div>
+        <div id="input">
+
+            <label for="zip"></label><br />
+            <input type="text" id="zip" name="zip" placeholder="enter zip code here." /><br />
+            <label for="feelings"></label><br />
+            <textarea id="feelings" name="feelings" rows="2" placeholder="enter your feeling."></textarea> <br />
+            <button id="generate">Write down!</button>    
+
+    </div>
+    </div>
+
+
+
+    <script src="api.js"></script>
+
+
+
+</body>
+</html>
