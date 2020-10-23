@@ -1,4 +1,4 @@
-const projectData = [];
+const projectData = {};
 
 const express = require('express');
 const app = express();
@@ -26,15 +26,12 @@ app.get('/all', (req, res) => {
 
 //POST
 app.post('/addWeather', (req, res) =>{
-
-  newJournal = {
-    location: req.body.location,
-    temprature: req.body.temprature,
-    icon: req.body.icon,
-    feelings: req.body.feelings
-  }
-  projectData.unshift(newJournal)
-  console.log('POST request to the homepage')
   console.log(req.body)
+  projectData.location = req.body.location;
+  projectData.temprature = req.body.temprature;
+  projectData.icon = req.body.icon;
+  projectData.feelings = req.body.feelings;
+  console.log('POST request to the homepage')
+  res.send({msg:"POST RECEIVED"});
 });
 
